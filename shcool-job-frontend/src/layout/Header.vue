@@ -22,7 +22,7 @@ import SelfInfo from '@/components/header/SelfInfo.vue'
 <style scoped lang="scss">
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     width: 100%;
     height: 60px;

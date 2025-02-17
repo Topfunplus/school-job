@@ -12,11 +12,6 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
             <div class="self-info-name">
                 天明
             </div>
-            <div class="self-info-option">
-                <el-icon>
-                    <ArrowDownBold />
-                </el-icon>
-            </div>
         </div>
     </div>
 </template>
@@ -33,8 +28,8 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
         border-radius: 50%;
         border: 2.2px solid $primary-100;
         overflow: hidden;
-        width: 50px; /* 确保容器宽度为50px */
-        height: 50px; /* 确保容器高度为50px */
+        width: 40px; /* 确保容器宽度为50px */
+        height: 40px; /* 确保容器高度为50px */
     }
 
     .self-info-img img {
@@ -44,24 +39,10 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
     }
 
     .self-info-name {
-        font-size: 20px;
+        font-size: 16px;
         color: $bg-300;
         font-weight: bolder;
     }
-
-    .self-info-option {
-        font-size: 20px;
-        color: $bg-300;
-        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-
-        &:hover {
-            color: $primary-100;
-            cursor: pointer;
-            transform: rotate(180deg); /* 旋转180度 */
-            transform-origin: center; /* 设置旋转中心为元素的中心 */
-        }
-    }
-
 }
 
 
