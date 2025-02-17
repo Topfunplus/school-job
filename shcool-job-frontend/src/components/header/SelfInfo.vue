@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import icon from '@/assets/img_1.png'
-import { ArrowDownBold } from '@element-plus/icons-vue'
 </script>
 
 <template>
@@ -22,14 +21,23 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    padding: 5px;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $accent-100;
+        border-radius: 10px;
+    }
 
     .self-info-img {
         border-radius: 50%;
         border: 2.2px solid $primary-100;
         overflow: hidden;
-        width: 40px; /* 确保容器宽度为50px */
-        height: 40px; /* 确保容器高度为50px */
+        width: 35px; /* 确保容器宽度为50px */
+        height: 35px; /* 确保容器高度为50px */
     }
 
     .self-info-img img {
@@ -40,8 +48,8 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
 
     .self-info-name {
         font-size: 16px;
-        color: $bg-300;
-        font-weight: bolder;
+        color: $primary-300;
+        font-weight: 400;
     }
 }
 

@@ -26,7 +26,8 @@ import SelfInfo from '@/components/header/SelfInfo.vue'
     align-content: center;
     width: 100%;
     height: 60px;
-    background-color: $base-background;
+    //background-color: $base-background;
+    background-color: $bg-200;
 
     .header-left {
         display: flex;
