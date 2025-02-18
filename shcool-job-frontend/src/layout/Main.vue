@@ -1,19 +1,20 @@
 <script setup lang="ts">
 
+import Footer from '@/layout/Footer.vue'
 </script>
 
 <template>
-  <div>
-    <div class="main">
-      <RouterView />
+    <div>
+        <div class="main">
+            <RouterView />
+            <Footer />
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
 .main {
-  width: 100%;
-  height: 100vh;
-  background-color: #f0f0f0;
+    width: 100%;
+    background-color: #f6f4f1;
 }
 </style>

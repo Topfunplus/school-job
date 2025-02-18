@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const headerList = ref<HeaderItem[]>([
     {
@@ -15,19 +16,21 @@ const headerList = ref<HeaderItem[]>([
     {
         id: 3,
         title: '搜索',
-        path: '/'
+        path: '/search'
     }
 ])
+const router = useRouter()
 const activeIndex = ref<number | null>(1)
-const handleClickItem = (index: number) => {
+const handleClickItem = (index: number, path: string) => {
     activeIndex.value = index
+    router.push(`${path}`)
 }
 </script>
 
 <template>
     <div>
         <ul class="header-list">
-            <li v-for="item in headerList" :key="item.id" @click="handleClickItem(item.id)"
+            <li v-for="item in headerList" :key="item.id" @click="handleClickItem(item.id,item.path)"
                 :class="{'active':activeIndex===item.id}">
                 {{ item.title }}
             </li>
@@ -40,7 +43,6 @@ const handleClickItem = (index: number) => {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
     list-style: none;
     width: 100%;
 
@@ -58,5 +60,6 @@ const handleClickItem = (index: number) => {
 
 .active {
     border-bottom: 2px solid $primary-200;
+    color: $primary-200 !important;
 }
 </style>

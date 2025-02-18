@@ -5,13 +5,18 @@ $primary-300: #fff3bf;
 $accent-100: rgba(241, 217, 139, 0.77);
 $accent-200: #916600;
 $text-100: #FFFFFF;
-$text-200: #c0c0c0;
+$text-200: #817d7d;
 $bg-100: #1C1C1C;
 $bg-200: #2b2b2b;
 $bg-300: #434343;
 
+$middle: 1000px;
+
+$search-bar-width: 700px;
 $base-color: #e1ffff;
 $base-background: #f5f6fd;
+
+$icon-color: #b3b3b3;
 
 // 导出变量
 :export {

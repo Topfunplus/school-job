@@ -21,15 +21,13 @@ import icon from '@/assets/img_1.png'
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    padding: 5px;
-
     transition: all 0.2s ease-in-out;
 
     &:hover {
         cursor: pointer;
         background-color: $accent-100;
         border-radius: 10px;
+
     }
 
     .self-info-img {

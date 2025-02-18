@@ -8,7 +8,7 @@ import Footer from '@/layout/Footer.vue'
   <div>
     <Header />
     <Main />
-    <Footer />
+
   </div>
 </template>
 
