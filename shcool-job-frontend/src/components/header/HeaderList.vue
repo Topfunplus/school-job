@@ -17,6 +17,11 @@ const headerList = ref<HeaderItem[]>([
         id: 3,
         title: '搜索',
         path: '/search'
+    },
+    {
+        id: 4,
+        title: '消息',
+        path: '/talking'
     }
 ])
 const router = useRouter()

@@ -3,6 +3,7 @@
 import RecommendationList from '@/components/main/RecommendationList.vue'
 import SearchBar from '@/components/header/SearchBar.vue'
 import JobBar from '@/components/main/components/JobBar.vue'
+import FontBanner from '@/components/main/components/FontBanner.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import JobBar from '@/components/main/components/JobBar.vue'
             <!--                <ImgScreen />-->
             <!--            </div>-->
             <!--            搜索框-->
+            <FontBanner />
             <div class="search-bar">
                 <SearchBar />
             </div>

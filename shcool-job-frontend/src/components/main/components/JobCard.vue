@@ -1,17 +1,8 @@
 <script setup lang="ts">
-import { type Ref, ref } from 'vue'
 import RecommendationList from '@/components/main/RecommendationList.vue'
 import { Comment, Location } from '@element-plus/icons-vue'
 
-const test = ref<Job | null>({
-    id: 1,
-    name: '前端工程师',
-    tags: ['前端', '工程师'],
-    salary: '10k-20k',
-    description: '前端工程师非常好太好了赶紧去学前端把哈哈哈哈哈哈',
-    location: '北京',
-    company: '华为'
-}) as Ref<Job>
+defineProps(['jobItem'])
 </script>
 
 <template>
@@ -20,12 +11,12 @@ const test = ref<Job | null>({
             <div class="job-card-body">
                 <div class="card-title">
                     <div class="title">
-                        <span class="name">
-                            {{ test.name }}
-                        </span>
-                        <span class="salary">
-                            {{ test.salary }}
-                        </span>
+                        <div class="name">
+                            {{ jobItem.name }}
+                        </div>
+                        <div class="salary">
+                            {{ jobItem.salary }}
+                        </div>
                     </div>
                     <div class="tags">
                         <div class="tags-container">
@@ -38,19 +29,19 @@ const test = ref<Job | null>({
                     <el-icon>
                         <Comment style="color: #b3b3b3;" />
                     </el-icon>
-                    {{ test.description }}
+                    {{ jobItem.description }}
                 </div>
 
                 <!--                公司名称和城市地点-->
                 <div class="card-bottom">
                     <div class="name">
-                        {{ test.company }}
+                        {{ jobItem.company }}
                     </div>
                     <div class="location">
                         <el-icon>
                             <Location style="color: #b3b3b3;" />
                         </el-icon>
-                        {{ test.location }}
+                        {{ jobItem.location }}
                     </div>
                 </div>
             </div>
@@ -78,12 +69,18 @@ const test = ref<Job | null>({
         & > .card-title {
             font-size: 20px;
 
+
             & > .title {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
 
+
                 & > .name {
+                    width: 60%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                     font-weight: 500;
                 }
 
