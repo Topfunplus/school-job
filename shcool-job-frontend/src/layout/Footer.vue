@@ -22,6 +22,8 @@
 
 <style scoped lang="scss">
 .footer {
+    position: sticky;
+    bottom: 0;
     background-color: #333;
     color: white;
     padding: 20px;
