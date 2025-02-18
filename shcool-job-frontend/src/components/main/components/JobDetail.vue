@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
+import GaodeMap from '@/components/main/components/GaodeMap.vue'
 
 const route = useRoute()
 
@@ -72,13 +73,21 @@ watchEffect(() => {
             </div>
         </div>
 
+        <!--        工作地址-->
+        <div class="address">
+            <el-divider />
+            <div class="address-title">
+                <div class="title">工作地点</div>
+                <div class="location">工作地点</div>
+            </div>
+            <div class="address-map">
+                <GaodeMap />
+            </div>
+        </div>
         <!--        其他岗位推荐-->
         <div class="other-jobs">
 
         </div>
-
-
-
     </div>
 </template>
 
@@ -115,6 +124,31 @@ watchEffect(() => {
             }
         }
 
+    }
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: $search-bar-width;
+
+    & > .address-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        & > .title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        & > .location {
+            font-weight: bold;
+            font-size: 18px;
+            color: $text-200;
+        }
     }
 }
 </style>
